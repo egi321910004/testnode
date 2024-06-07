@@ -3,7 +3,7 @@ import Joi from "joi";
 
 const userSchema = Joi.object({
   name: Joi.string().min(3).max(30).required(),
-  identity_number: Joi.string().length(16).required(),
+  identity_number: Joi.string().length(10).required(),
   email: Joi.string().email().required(),
   date_of_birth: Joi.date().required(),
 });
